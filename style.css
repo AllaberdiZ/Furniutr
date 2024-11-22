@@ -74,7 +74,10 @@ body{
     font-size: 20px;
     width: 50%;
     transition: 0.4s;
+}
 
+.menuicon {
+    display: none;
 }
 
 .icons a:hover{
@@ -82,4 +85,21 @@ body{
     color: #fff;
 }
 
+@media screen and (max-width:600px) {
+    .topnav a{display: none;}
+    .topnav a.menuicon {display: block; float: right;}    
+}
 
+@media screen and (max-width:600px) {
+    .topnav.media {position: relative;}
+    .topnav.media #menuicon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.media a{
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}

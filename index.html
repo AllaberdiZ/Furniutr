@@ -17,7 +17,7 @@
   <body>
     <div id="navbar">
       <div id="logo"><a href="#">Furniutr.</a></div>
-      <div id="responsive">
+      <div id="responsive" class="topnav">
         <div class="mymenu" id="menu">
           <a href="#home">Home</a>
           <a href="#about">About</a>
@@ -31,8 +31,24 @@
           <a href="#">
             <i class="fa-solid fa-magnifying-glass"></i>
           </a>
+          <a href="javascript:void(0);" class="menuicon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
         </div>
       </div>
     </div>
+
+    <div id="home"></div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("responsive");
+        if (x.className === "topnav") {
+          x.className += " media";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
   </body>
 </html>
