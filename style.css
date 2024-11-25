@@ -11,22 +11,15 @@ body{
 }
 
 #navbar{
-    margin-top: 20px;
-    width: 100%;
-    display: block;
+    display: flex;
+    justify-content: space-between; /* Align logo left and links right */
 }
 
 #responsive{
-    float: right;
-    width: 60%;
     display: flex;
-}
+    }
 
 
-#logo{
-    float: left;
-    width: 20%;
-}
 
 #logo a{
     text-align: center;
@@ -42,18 +35,34 @@ body{
 }
 
 #menu{
-    width: 100%;
+    display: flex;
     overflow: auto;
 }
 
 #menu a{ 
+    display: flex;
     float: left;
+    padding: 20px 30px;
+    font-weight: 600;
+    color: #282A30;
+    text-decoration: none;
+    font-size: 19px;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.navicons{
+    display: flex;
+}
+
+.navicons a{
     padding: 20px 30px;
     color: #282A30;
     text-decoration: none;
     font-size: 19px;
     text-align: center;
     transition: 0.4s;
+
 }
 
 #menu a:hover{
@@ -62,44 +71,12 @@ body{
 
 }
 
-.icons{
-    width: 30%;
-}
-
-.icons a{
-    text-decoration: none;
-    color: #282A30;
-    padding: 20px 0;
-    float: right;
-    font-size: 20px;
-    width: 50%;
-    transition: 0.4s;
-}
-
-.menuicon {
+#menuicon {
     display: none;
 }
 
-.icons a:hover{
+.navicons a:hover{
     background-color: #F7515C;
     color: #fff;
 }
 
-@media screen and (max-width:600px) {
-    .topnav a{display: none;}
-    .topnav a.menuicon {display: block; float: right;}    
-}
-
-@media screen and (max-width:600px) {
-    .topnav.media {position: relative;}
-    .topnav.media #menuicon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .topnav.media a{
-        float: none;
-        display: block;
-        text-align: left;
-    }
-}
